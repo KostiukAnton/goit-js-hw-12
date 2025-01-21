@@ -12,7 +12,7 @@ import { page } from '../main';
 // Функція для запиту API
 export async function fetchImages(query) {
   try {
-    const response = await axios.get('', {
+    const { data } = await axios.get('', {
       params: {
         q: query,
         image_type: 'photo',
@@ -25,8 +25,8 @@ export async function fetchImages(query) {
 
     // return response.data.hits; // Повертаємо результати
     return {
-      images: response.data.hits,
-      totalHits: response.data.totalHits,
+      images: data.hits,
+      totalHits: data.totalHits,
     };
   } catch (error) {
     console.error('Error fetching images:', error.message);

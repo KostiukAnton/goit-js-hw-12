@@ -104,7 +104,7 @@ loadMoreBtn.addEventListener('click', async () => {
     renderGallery(images);
     lightbox.refresh();
 
-    loadedImagesCount += images.length;
+    // loadedImagesCount += images.length;
 
     // Плавне прокручування після додавання нових зображень
     scrollToNextGroup();
